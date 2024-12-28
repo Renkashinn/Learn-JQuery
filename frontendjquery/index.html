@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .merah {
+                color: red;
+            }
+            .biru {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Kemana kamu ingin pergi?</h1>
+        <ul class="lokasi">
+            <li class="bandung">Bandung</li>
+            <li class="surabaya">Surabaya</li>
+            <li class="jakarta">Jakarta</li>
+            <!-- <li><input type="text" class="inputan" value="90" /></li> -->
+        </ul>
+        <!-- <button id="toggleBandung">Toggle Bandung</button> -->
+        <button id="gantiBandungJadiBiru">JADI BIRU!</button>
+        <button id="gantiBandungJadiMerah">JADI MERAH!</button>
+        <button id="gantiBandungJadiBesar">JADI BESAR!</button>
+
+        <script src="fjquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // console.log('jQuery Sudah Jalan');
+                // $('.amerika').text('Amerika');
+                // var jogja = $('<li>Yogyakarta</li>');
+                // var bali = $('<li>Bali</li>');
+                // var subjudul = $('<h2>Pillih destinasimu sekarang juga</h2>')
+                // $('.lokasi').prepend(jogja);
+                // $('.lokasi').append(bali);
+                // $('.lokasi').before(subjudul)
+                // console.log($('.inputan').val());
+                // $('.bandung').text('Cimahi');
+                // $('.surabaya').html('<em>Surabaya</em>');
+                // $('.inputan').val(150);
+                // $('.bandung').remove();
+                // $('.surabaya').empty();
+                // $('#keBandung').on('click', function () {
+                //     alert('Saya suka ke Bandung');
+                // });
+                // $('#hapusBandung').on('click', function () {
+                //     $('.bandung').remove();
+                //     alert('Bandung dihapus :(');
+                // });
+                // $('#toggleBandung').on('click', function () {
+                //     $('.bandung').animate({
+                //         marginLeft: 1000,
+                //     });
+                // });
+                $('#gantiBandungJadiBiru').on('click', function () {
+                    $('.bandung').removeClass('merah');
+                    $('.bandung').addClass('biru');
+                });
+                $('#gantiBandungJadiMerah').on('click', function () {
+                    $('.bandung').removeClass('biru');
+                    $('.bandung').addClass('merah');
+                });
+                $('#gantiBandungJadiBesar').on('click', function () {
+                    $('.bandung').css({
+                        fontSize: 100,
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
